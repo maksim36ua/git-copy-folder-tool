@@ -23,8 +23,8 @@
     <ProjectGuid>{FF83A63E-42E3-4434-A0F3-E38E227C5348}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GitToolbar</RootNamespace>
-    <AssemblyName>GitToolbar</AssemblyName>
+    <RootNamespace>GitCopyFolderTool</RootNamespace>
+    <AssemblyName>GitCopyFolderTool</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
