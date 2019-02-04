@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Commands package="guidGitToolbarPackage">
+		<Menus>
+			<Menu guid="guidGitToolbarPackageCmdSet" id="Toolbar" type="Toolbar" >
+				<CommandFlag>DefaultDocked</CommandFlag>
+				<Strings>
+					<ButtonText>Git Configs Toolbar</ButtonText>
+					<CommandName>Git Configs Toolbar</CommandName>
+				</Strings>
+			</Menu>
+		</Menus>
+
+		<Groups>
+			<Group guid="guidGitToolbarPackageCmdSet" id="ToolbarGroup" priority="0x0000">
+				<Parent guid="guidGitToolbarPackageCmdSet" id="Toolbar"/>
+			</Group>
+		</Groups>
+
+		<Combos>
+			<Combo guid="guidGitToolbarPackageCmdSet" id="FolderCombo" priority="0x0100" type="DynamicCombo" defaultWidth="90" idCommandList="FolderComboGetList">
+				<Parent guid="guidGitToolbarPackageCmdSet" id="ToolbarGroup"/>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>CommandWellOnly</CommandFlag>
+				<Strings>
+					<ButtonText>Folder: </ButtonText>
+					<MenuText>Dynamic Combo: </MenuText>
+					<ToolTipText>Enter Zoom Level</ToolTipText>
+					<CanonicalName>Dynamic Combo</CanonicalName>
+					<LocCanonicalName>Dynamic Combo</LocCanonicalName>
+					<CommandName>Dynamic Combo</CommandName>
+				</Strings>
+			</Combo>
+
+			<Combo guid="guidGitToolbarPackageCmdSet" id="BrandCombo" priority="0x0200" type="DynamicCombo" defaultWidth="90" idCommandList="BrandComboGetList">
+				<Parent guid="guidGitToolbarPackageCmdSet" id="ToolbarGroup"/>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>CommandWellOnly</CommandFlag>
+				<Strings>
+					<ButtonText>Brand: </ButtonText>
+					<MenuText>Dynamic Combo: </MenuText>
+					<ToolTipText>Enter Brand Name</ToolTipText>
+					<CanonicalName>Dynamic Combo</CanonicalName>
+					<LocCanonicalName>Dynamic Combo</LocCanonicalName>
+					<CommandName>Dynamic Combo</CommandName>
+				</Strings>
+			</Combo>
+		</Combos>
+
+		<Buttons>
+			<Button guid="guidGitToolbarPackageCmdSet" id="GetConfigCommandId" priority="0x0300" type="Button">
+				<Parent guid= "guidGitToolbarPackageCmdSet" id="ToolbarGroup" />
+				<Strings>
+					<ButtonText>Get Config</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<GuidSymbol name="guidGitToolbarPackage" value="{ed30f6ee-6706-4241-8f2b-6a6f27fd83cd}" />
+		<GuidSymbol name="guidGitToolbarPackageCmdSet" value="{ecd0587b-f741-47ae-ae52-14ee47340eb1}">
+			<IDSymbol name="Toolbar" value="0x1000" />
+			<IDSymbol name="ToolbarGroup" value="0x1050" />
+			<IDSymbol name="FolderCombo" value="0x107"/>
+			<IDSymbol name="BrandCombo" value="0x108"/>
+
+			<IDSymbol name="FolderComboGetList" value="0x109"/>
+			<IDSymbol name="BrandComboGetList" value="0x110"/>
+			<IDSymbol name="GetConfigCommandId" value="0x111"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
