@@ -54,9 +54,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GitToolbarPackage.cs" />
-    <Compile Include="GitToolbarGuidList.cs" />
-    <Compile Include="GitToolbarPackageCmdIdList.cs" />
+    <Compile Include="GitUpdateFilesToolPackage.cs" />
+    <Compile Include="GitUpdateFilesToolGuidList.cs" />
+    <Compile Include="GitUpdateFilesToolPackageCmdIdList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
