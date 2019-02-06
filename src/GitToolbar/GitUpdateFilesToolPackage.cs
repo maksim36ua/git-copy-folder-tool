@@ -35,8 +35,6 @@ namespace GitToolbar
 		private string SelectedFolder { get; set; }
 		private string SelectedBrand { get; set; }
 
-		#region Package Members
-
 		protected override void Initialize()
 		{
 			base.Initialize();
@@ -84,8 +82,6 @@ namespace GitToolbar
 				else if (input != null)
 				{
 					SelectedFolder = input.ToString();
-
-					//ShowMessage("Combo", currentFolder);
 				}
 				else
 				{
@@ -117,8 +113,6 @@ namespace GitToolbar
 				else if (input != null)
 				{
 					SelectedBrand = input.ToString();
-
-					//	ShowMessage("Combo", currentBrand);
 				}
 				else
 				{
@@ -228,26 +222,6 @@ namespace GitToolbar
 			}
 		}
 
-		//public void ShowMessage(string title, string message)
-		//{
-		//	IVsUIShell uiShell = (IVsUIShell)GetService(typeof(SVsUIShell));
-		//	Guid clsid = Guid.Empty;
-		//	int result = VSConstants.S_OK;
-		//	int hr = uiShell.ShowMessageBox(0,
-		//		ref clsid,
-		//		title,
-		//		message,
-		//		null,
-		//		0,
-		//		OLEMSGBUTTON.OLEMSGBUTTON_OK,
-		//		OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
-		//		OLEMSGICON.OLEMSGICON_INFO,
-		//		0,        // false = application modal; true would make it system modal
-		//		out result);
-		//	ErrorHandler.ThrowOnFailure(hr);
-		//}
-
-		#endregion
 	}
 
 	public class OptionPageGrid : DialogPage
